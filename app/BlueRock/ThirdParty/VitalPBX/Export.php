@@ -27,8 +27,10 @@ class Export
         $end = $this->end;
 
         $start = Carbon::createFromFormat('Y-m-d', $start);
+        $start->startOfDay();
 
         $end = Carbon::createFromFormat('Y-m-d', $end);
+        $end->endOfDay();
 
         $pbxId = config('bluerocktel.pbxId');
 
