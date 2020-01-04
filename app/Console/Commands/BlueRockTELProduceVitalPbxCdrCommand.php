@@ -45,6 +45,8 @@ class BlueRockTELProduceVitalPbxCdrCommand extends Command
 
             $this->info('configuration ok');
 
+            sleep(rand(0, 120));
+
             try {
 
                 $export = new Export($start, $end);

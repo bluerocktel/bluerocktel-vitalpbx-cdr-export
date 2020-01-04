@@ -35,8 +35,8 @@ class Kernel extends ConsoleKernel
             $start,
             $end,
 
-        ])->everyMinute();
-        
+        ])->dailyAt('03:00');
+
     }
 
     /**
