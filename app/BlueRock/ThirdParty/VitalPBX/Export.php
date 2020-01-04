@@ -75,7 +75,7 @@ class Export
                 foreach ($calls as $call) {
 
                     $calldate = new Carbon($call->calldate);
-                    $calldate = $calldate->format('Y-m-d H:i:s'); // TODO : could be removed, I left it in order to match current ombutel cdr
+                    $calldate = $calldate->format('Y-m-d H:i:s');
 
                     $cdr->insertOne([
 

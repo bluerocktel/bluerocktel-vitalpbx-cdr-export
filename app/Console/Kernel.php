@@ -26,17 +26,17 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $start = now()->subDays(1)->startOfDay()->format('Y-m-d');
+        $start = now()->subDays(1)->format('Y-m-d');
 
-        $end = now()->subDays(1)->endOfDay()->format('Y-m-d');
+        $end = now()->subDays(1)->format('Y-m-d');
 
         $schedule->command('brtel:produceVitalPbxCdr', [
 
-            'start' => $start,
-            'end' => $end,
+            $start,
+            $end,
 
-        ])->dailyAt('03:00');
-
+        ])->everyMinute();
+        
     }
 
     /**

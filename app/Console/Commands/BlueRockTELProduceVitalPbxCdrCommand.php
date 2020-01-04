@@ -43,6 +43,8 @@ class BlueRockTELProduceVitalPbxCdrCommand extends Command
 
         if (config('bluerocktel.pbxId')) {
 
+            $this->info('configuration ok');
+
             try {
 
                 $export = new Export($start, $end);
