@@ -26,9 +26,9 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $start = now()->subDays(30)->format('Y-m-d');
+        $start = now()->subDays(1)->format('Y-m-d');
 
-        $end = now()->subDays(30)->format('Y-m-d');
+        $end = now()->subDays(1)->format('Y-m-d');
 
         $schedule->command('brtel:produceVitalPbxCdr --sleep', [
 
