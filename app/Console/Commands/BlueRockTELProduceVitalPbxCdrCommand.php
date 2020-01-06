@@ -13,7 +13,7 @@ class BlueRockTELProduceVitalPbxCdrCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'brtel:produceVitalPbxCdr {start} {end}';
+    protected $signature = 'brtel:produceVitalPbxCdr {start} {end} {--sleep}';
 
     /**
      * The console command description.
@@ -45,7 +45,11 @@ class BlueRockTELProduceVitalPbxCdrCommand extends Command
 
             $this->info('configuration ok');
 
-            sleep(rand(0, 120));
+            if ($this->option('sleep') == true) {
+
+                sleep(rand(0, 120));
+
+            }
 
             try {
 
