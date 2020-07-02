@@ -65,13 +65,13 @@ return [
         ],
 
         'ftp' => [
-            'driver'   => 'ftp',
+            'driver'   => 'sftp',
             'host'     => env('FTP_HOST'),
             'username' => env('FTP_USERNAME'),
             'password' => env('FTP_PASSWORD'),
             // Optional FTP Settings...
             //'port'     => env('FTP_PORT', 21),
-            // 'root'     => '',
+             'root'     => 'home',
             // 'passive'  => true,
             // 'ssl'      => true,
             // 'timeout'  => 30,
